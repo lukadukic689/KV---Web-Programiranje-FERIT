@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – GigaGear</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="logo">Giga<span>Gear</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Otvori izbornik"><span></span></label>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Početna</a></li>
+      <li class="has-dropdown">
+        <a href="proizvodi.html">Proizvodi ▾</a>
+        <ul class="dropdown">
+          <li><a href="proizvodi.html#misevi">Miševi</a></li>
+          <li><a href="proizvodi.html#tipkovnice">Tipkovnice</a></li>
+          <li><a href="proizvodi.html#slusalice">Slušalice</a></li>
+          <li><a href="proizvodi.html#monitori">Monitori</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+      <li><a href="kosarica.html">Košarica (0)</a></li>
+      <li><a href="prijava.html">Prijava</a></li>
+      <li><a href="registracija.html" class="btn-nav">Registracija</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+
+  <nav class="breadcrumbs"><a href="index.html">Početna</a> › Kontakt</nav>
+  <h1>Kontakt i informacije</h1>
+
+  <div class="contact-grid">
+    <div>
+      <section class="section">
+        <h2>Pišite nam</h2>
+        <form id="forma-kontakt" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="k-ime">Ime i prezime</label>
+              <input type="text" id="k-ime" name="ime" required>
+            </div>
+            <div class="form-group">
+              <label for="k-email">E-mail</label>
+              <input type="email" id="k-email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="k-tema">Tema</label>
+            <select id="k-tema" name="tema">
+              <option>Pitanje o proizvodu</option>
+              <option>Status narudžbe</option>
+              <option>Reklamacija / jamstvo</option>
+              <option>Sastavljanje računala</option>
+              <option>Ostalo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="k-poruka">Poruka</label>
+            <textarea id="k-poruka" name="poruka" required></textarea>
+          </div>
+          <button type="submit" class="btn">Pošalji poruku</button>
+        </form>
+      </section>
+    </div>
+
+    <div>
+      <section class="section">
+        <h2>Podaci o trgovini</h2>
+        <p><strong>GigaGear d.o.o.</strong><br>
+        Ulica Ivana Lučića 5<br>
+        10000 Zagreb</p>
+        <p>Telefon: 01 2345 678<br>
+        E-mail: info@gigagear.hr</p>
+        <p>Radno vrijeme korisničke podrške:<br>
+        pon – pet 9:00 – 17:00</p>
+      </section>
+
+      <section class="section" id="dostava">
+        <h2>Dostava i plaćanje</h2>
+        <p>Dostavu obavljamo dostavnom službom na području cijele Hrvatske. Narudžbe zaprimljene radnim danom do 14 h šaljemo isti dan, a isporuka traje 1–2 radna dana.</p>
+        <p>Dostava je <strong>besplatna za narudžbe iznad 100 €</strong>; ispod toga iznosi 4,99 €. Plaćanje je moguće karticom, virmanom ili pouzećem.</p>
+      </section>
+
+      <section class="section" id="povrat">
+        <h2>Povrat i jamstvo</h2>
+        <p>Svaki proizvod možete vratiti u roku od 14 dana od primitka bez navođenja razloga, pod uvjetom da je neoštećen i u originalnoj ambalaži.</p>
+        <p>Na svu opremu dajemo jamstvo od 24 mjeseca. Reklamacije rješavamo u roku od 15 radnih dana.</p>
+      </section>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>GigaGear</h4>
+        <p>Web trgovina gaming opremom i računalnim komponentama. Projektni zadatak iz kolegija Web programiranje.</p>
+      </div>
+      <div>
+        <h4>Trgovina</h4>
+        <ul>
+          <li><a href="proizvodi.html">Svi proizvodi</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="kosarica.html">Košarica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Korisnički račun</h4>
+        <ul>
+          <li><a href="prijava.html">Prijava</a></li>
+          <li><a href="registracija.html">Registracija</a></li>
+          <li><a href="admin.html">Administracija</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html#dostava">Dostava i plaćanje</a></li>
+          <li><a href="kontakt.html#povrat">Povrat i jamstvo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 GigaGear. Sva prava pridržana.</p>
+  </div>
+</footer>
+
+</body>
+</html>

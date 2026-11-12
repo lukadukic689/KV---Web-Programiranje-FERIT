@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administracija – GigaGear</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="logo">Giga<span>Gear</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Otvori izbornik"><span></span></label>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Početna</a></li>
+      <li class="has-dropdown">
+        <a href="proizvodi.html">Proizvodi ▾</a>
+        <ul class="dropdown">
+          <li><a href="proizvodi.html#misevi">Miševi</a></li>
+          <li><a href="proizvodi.html#tipkovnice">Tipkovnice</a></li>
+          <li><a href="proizvodi.html#slusalice">Slušalice</a></li>
+          <li><a href="proizvodi.html#monitori">Monitori</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="admin.html" class="active">Administracija</a></li>
+      <li><a href="index.html" class="btn-nav">Odjava</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+
+  <h1>Administracija</h1>
+  <p class="muted">Prijavljen kao <strong>admin@gigagear.hr</strong> (uloga: administrator)</p>
+
+  <div class="admin-layout">
+
+    <nav class="admin-nav">
+      <a href="#pregled" class="active">Pregled</a>
+      <a href="#proizvodi">Proizvodi</a>
+      <a href="#korisnici">Korisnici</a>
+      <a href="#narudzbe">Narudžbe</a>
+      <a href="#dnevnik">Dnevnik aktivnosti</a>
+    </nav>
+
+    <div>
+
+      <section class="section" id="pregled">
+        <h2>Pregled</h2>
+        <div class="stats">
+          <div class="stat"><div class="value">18</div><div class="label">Proizvoda u ponudi</div></div>
+          <div class="stat"><div class="value">42</div><div class="label">Registriranih korisnika</div></div>
+          <div class="stat"><div class="value">7</div><div class="label">Narudžbi ovaj tjedan</div></div>
+          <div class="stat"><div class="value">2</div><div class="label">Rasprodano</div></div>
+        </div>
+      </section>
+
+      <section class="section" id="proizvodi">
+        <div class="section-head">
+          <h2>Proizvodi</h2>
+          <a href="#novi-proizvod" class="btn btn-sm">+ Novi proizvod</a>
+        </div>
+        <div class="table-wrap">
+          <table class="table" id="tablica-proizvoda">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Naziv</th>
+                <th>Kategorija</th>
+                <th class="num">Cijena</th>
+                <th class="num">Zaliha</th>
+                <th>Akcije</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td><td>Zephyr X1 Wireless</td><td>Miševi</td>
+                <td class="num">89,99 €</td><td class="num">14</td>
+                <td><a href="#novi-proizvod" class="btn btn-sm btn-outline">Uredi</a> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+              <tr>
+                <td>2</td><td>Strix M3 Pro</td><td>Miševi</td>
+                <td class="num">49,90 €</td><td class="num">30</td>
+                <td><a href="#novi-proizvod" class="btn btn-sm btn-outline">Uredi</a> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+              <tr>
+                <td>3</td><td>Nimbus Ultralight</td><td>Miševi</td>
+                <td class="num">74,00 €</td><td class="num">0</td>
+                <td><a href="#novi-proizvod" class="btn btn-sm btn-outline">Uredi</a> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+              <tr>
+                <td>4</td><td>Titan K75 TKL</td><td>Tipkovnice</td>
+                <td class="num">129,00 €</td><td class="num">9</td>
+                <td><a href="#novi-proizvod" class="btn btn-sm btn-outline">Uredi</a> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+              <tr>
+                <td>5</td><td>Vortex RX 8800 16 GB</td><td>Komponente</td>
+                <td class="num">649,00 €</td><td class="num">5</td>
+                <td><a href="#novi-proizvod" class="btn btn-sm btn-outline">Uredi</a> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="form-card form-wide" id="novi-proizvod" style="margin:24px 0 0">
+          <h3>Dodaj / uredi proizvod</h3>
+          <form id="forma-proizvod" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="p-naziv">Naziv</label>
+                <input type="text" id="p-naziv" name="naziv" required>
+              </div>
+              <div class="form-group">
+                <label for="p-kategorija">Kategorija</label>
+                <select id="p-kategorija" name="kategorija">
+                  <option>Miševi</option>
+                  <option>Tipkovnice</option>
+                  <option>Slušalice</option>
+                  <option>Monitori</option>
+                  <option>Gotova računala</option>
+                  <option>Komponente</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="p-cijena">Cijena (€)</label>
+                <input type="number" id="p-cijena" name="cijena" min="0" step="0.01" required>
+              </div>
+              <div class="form-group">
+                <label for="p-zaliha">Zaliha (kom)</label>
+                <input type="number" id="p-zaliha" name="zaliha" min="0" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="p-opis">Opis</label>
+              <textarea id="p-opis" name="opis"></textarea>
+            </div>
+            <button type="submit" class="btn">Spremi proizvod</button>
+            <button type="reset" class="btn btn-outline">Odustani</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="korisnici">
+        <h2>Korisnici</h2>
+        <div class="table-wrap">
+          <table class="table" id="tablica-korisnika">
+            <thead>
+              <tr><th>ID</th><th>Ime i prezime</th><th>E-mail</th><th>Uloga</th><th>Registriran</th><th>Akcije</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td><td>Administrator</td><td>admin@gigagear.hr</td>
+                <td><span class="badge badge-new">administrator</span></td><td>01.09.2026.</td>
+                <td><button class="btn btn-sm btn-outline" type="button">Uredi</button></td>
+              </tr>
+              <tr>
+                <td>2</td><td>Ivana Horvat</td><td>ivana.horvat@primjer.hr</td>
+                <td><span class="badge">kupac</span></td><td>14.10.2026.</td>
+                <td><button class="btn btn-sm btn-outline" type="button">Uredi</button> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+              <tr>
+                <td>3</td><td>Marko Kovač</td><td>marko.kovac@primjer.hr</td>
+                <td><span class="badge">kupac</span></td><td>02.11.2026.</td>
+                <td><button class="btn btn-sm btn-outline" type="button">Uredi</button> <button class="btn btn-sm btn-danger" type="button">Obriši</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="narudzbe">
+        <h2>Narudžbe</h2>
+        <div class="table-wrap">
+          <table class="table" id="tablica-narudzbi">
+            <thead>
+              <tr><th>Br.</th><th>Kupac</th><th>Datum</th><th class="num">Iznos</th><th>Status</th><th>Akcije</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1007</td><td>Ivana Horvat</td><td>11.11.2026.</td><td class="num">218,99 €</td>
+                <td><span class="badge badge-new">U obradi</span></td>
+                <td><button class="btn btn-sm btn-outline" type="button">Detalji</button></td>
+              </tr>
+              <tr>
+                <td>#1006</td><td>Marko Kovač</td><td>10.11.2026.</td><td class="num">1 499,00 €</td>
+                <td><span class="badge badge-ok">Poslano</span></td>
+                <td><button class="btn btn-sm btn-outline" type="button">Detalji</button></td>
+              </tr>
+              <tr>
+                <td>#1005</td><td>Ivana Horvat</td><td>06.11.2026.</td><td class="num">49,90 €</td>
+                <td><span class="badge badge-ok">Isporučeno</span></td>
+                <td><button class="btn btn-sm btn-outline" type="button">Detalji</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="dnevnik">
+        <h2>Dnevnik aktivnosti</h2>
+        <p class="muted">Evidencija radnji korisnika i administratora u sustavu.</p>
+        <div class="table-wrap">
+          <table class="table" id="tablica-dnevnika">
+            <thead>
+              <tr><th>Vrijeme</th><th>Korisnik</th><th>Radnja</th><th>Detalji</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>12.11.2026. 15:42</td><td>admin@gigagear.hr</td><td>Prijava</td><td>Uspješna prijava administratora</td></tr>
+              <tr><td>11.11.2026. 20:15</td><td>ivana.horvat@primjer.hr</td><td>Narudžba</td><td>Kreirana narudžba #1007</td></tr>
+              <tr><td>11.11.2026. 09:03</td><td>admin@gigagear.hr</td><td>Izmjena proizvoda</td><td>Zaliha "Volt 750 W Gold" postavljena na 0</td></tr>
+              <tr><td>10.11.2026. 18:30</td><td>marko.kovac@primjer.hr</td><td>Narudžba</td><td>Kreirana narudžba #1006</td></tr>
+              <tr><td>02.11.2026. 12:11</td><td>marko.kovac@primjer.hr</td><td>Registracija</td><td>Novi korisnički račun</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>GigaGear</h4>
+        <p>Web trgovina gaming opremom i računalnim komponentama. Projektni zadatak iz kolegija Web programiranje.</p>
+      </div>
+      <div>
+        <h4>Trgovina</h4>
+        <ul>
+          <li><a href="proizvodi.html">Svi proizvodi</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="kosarica.html">Košarica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Korisnički račun</h4>
+        <ul>
+          <li><a href="prijava.html">Prijava</a></li>
+          <li><a href="registracija.html">Registracija</a></li>
+          <li><a href="admin.html">Administracija</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html#dostava">Dostava i plaćanje</a></li>
+          <li><a href="kontakt.html#povrat">Povrat i jamstvo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 GigaGear. Sva prava pridržana.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registracija – GigaGear</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="logo">Giga<span>Gear</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Otvori izbornik"><span></span></label>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Početna</a></li>
+      <li class="has-dropdown">
+        <a href="proizvodi.html">Proizvodi ▾</a>
+        <ul class="dropdown">
+          <li><a href="proizvodi.html#misevi">Miševi</a></li>
+          <li><a href="proizvodi.html#tipkovnice">Tipkovnice</a></li>
+          <li><a href="proizvodi.html#slusalice">Slušalice</a></li>
+          <li><a href="proizvodi.html#monitori">Monitori</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="kosarica.html">Košarica (0)</a></li>
+      <li><a href="prijava.html">Prijava</a></li>
+      <li><a href="registracija.html" class="btn-nav active">Registracija</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="form-card form-wide">
+    <h1>Registracija</h1>
+    <p class="muted">Otvori besplatni korisnički račun. Registrirani kupci brže dovršavaju narudžbe i imaju uvid u povijest kupnji.</p>
+
+    <form id="forma-registracija" action="#" method="post">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ime">Ime</label>
+          <input type="text" id="ime" name="ime" required autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label for="prezime">Prezime</label>
+          <input type="text" id="prezime" name="prezime" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail adresa</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        <p class="form-help">E-mail služi za prijavu i potvrdu narudžbi.</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="lozinka">Lozinka</label>
+          <input type="password" id="lozinka" name="lozinka" required minlength="8" autocomplete="new-password">
+          <p class="form-help">Najmanje 8 znakova.</p>
+        </div>
+        <div class="form-group">
+          <label for="lozinka2">Ponovi lozinku</label>
+          <input type="password" id="lozinka2" name="lozinka2" required minlength="8" autocomplete="new-password">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telefon">Telefon (neobavezno)</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="+385 9x xxx xxxx" autocomplete="tel">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="adresa">Adresa</label>
+          <input type="text" id="adresa" name="adresa" placeholder="Ulica i kućni broj" autocomplete="street-address">
+        </div>
+        <div class="form-group">
+          <label for="grad">Grad i poštanski broj</label>
+          <input type="text" id="grad" name="grad" placeholder="10000 Zagreb" autocomplete="address-level2">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox"><input type="checkbox" name="uvjeti" value="1" required> Prihvaćam uvjete korištenja i pravila privatnosti</label>
+        <label class="checkbox"><input type="checkbox" name="newsletter" value="1"> Želim primati obavijesti o akcijama</label>
+      </div>
+
+      <button type="submit" class="btn btn-block">Otvori račun</button>
+    </form>
+
+    <p class="form-footer">Već imaš račun? <a href="prijava.html">Prijavi se</a></p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>GigaGear</h4>
+        <p>Web trgovina gaming opremom i računalnim komponentama. Projektni zadatak iz kolegija Web programiranje.</p>
+      </div>
+      <div>
+        <h4>Trgovina</h4>
+        <ul>
+          <li><a href="proizvodi.html">Svi proizvodi</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="kosarica.html">Košarica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Korisnički račun</h4>
+        <ul>
+          <li><a href="prijava.html">Prijava</a></li>
+          <li><a href="registracija.html">Registracija</a></li>
+          <li><a href="admin.html">Administracija</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html#dostava">Dostava i plaćanje</a></li>
+          <li><a href="kontakt.html#povrat">Povrat i jamstvo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 GigaGear. Sva prava pridržana.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proizvodi – GigaGear</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="logo">Giga<span>Gear</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Otvori izbornik"><span></span></label>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Početna</a></li>
+      <li class="has-dropdown">
+        <a href="proizvodi.html" class="active">Proizvodi ▾</a>
+        <ul class="dropdown">
+          <li><a href="#misevi">Miševi</a></li>
+          <li><a href="#tipkovnice">Tipkovnice</a></li>
+          <li><a href="#slusalice">Slušalice</a></li>
+          <li><a href="#monitori">Monitori</a></li>
+          <li><a href="#racunala">Gotova računala</a></li>
+          <li><a href="#komponente">Komponente</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="kosarica.html">Košarica (0)</a></li>
+      <li><a href="prijava.html">Prijava</a></li>
+      <li><a href="registracija.html" class="btn-nav">Registracija</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+
+  <nav class="breadcrumbs"><a href="index.html">Početna</a> › Proizvodi</nav>
+  <h1>Svi proizvodi</h1>
+  <p class="muted">Pregledaj ponudu po kategorijama ili filtriraj po cijeni i dostupnosti.</p>
+
+  <div class="layout-sidebar">
+
+    <aside class="sidebar">
+      <h3>Kategorije</h3>
+      <ul>
+        <li><a href="#misevi">Miševi</a></li>
+        <li><a href="#tipkovnice">Tipkovnice</a></li>
+        <li><a href="#slusalice">Slušalice</a></li>
+        <li><a href="#monitori">Monitori</a></li>
+        <li><a href="#racunala">Gotova računala</a></li>
+        <li><a href="#komponente">Komponente</a></li>
+      </ul>
+
+      <h3>Filtri</h3>
+      <form action="#" method="get">
+        <div class="form-group">
+          <label for="pretraga">Pretraga</label>
+          <input type="search" id="pretraga" name="q" placeholder="npr. bežični miš">
+        </div>
+        <div class="form-group">
+          <label for="cijena-do">Cijena do (€)</label>
+          <input type="number" id="cijena-do" name="cijena_do" min="0" step="10" placeholder="500">
+        </div>
+        <div class="form-group">
+          <label for="sort">Sortiraj</label>
+          <select id="sort" name="sort">
+            <option value="popularno">Najpopularnije</option>
+            <option value="cijena-asc">Cijena: niža prema višoj</option>
+            <option value="cijena-desc">Cijena: viša prema nižoj</option>
+            <option value="naziv">Naziv A–Ž</option>
+          </select>
+        </div>
+        <label class="checkbox"><input type="checkbox" name="dostupno" value="1"> Samo dostupno</label>
+        <button type="submit" class="btn btn-block" style="margin-top:12px">Primijeni</button>
+      </form>
+    </aside>
+
+    <div id="lista-proizvoda">
+
+      <section class="section" id="misevi">
+        <div class="section-head"><h2>Miševi</h2></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-img">Miš</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Zephyr X1 Wireless</h3>
+              <p class="muted">Bežični, 26 000 DPI, 59 g, 70 h baterije</p>
+              <span class="price">89,99 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Miš</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Strix M3 Pro</h3>
+              <p class="muted">Žičani, optički senzor 19 000 DPI, 6 tipki</p>
+              <span class="price">49,90 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Miš</div>
+            <div class="card-body">
+              <span class="badge badge-warn">Rasprodano</span>
+              <h3>Nimbus Ultralight</h3>
+              <p class="muted">Bežični, 49 g, perforirano kućište</p>
+              <span class="price">74,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="tipkovnice">
+        <div class="section-head"><h2>Tipkovnice</h2></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-img">Tipkovnica</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Titan K75 TKL</h3>
+              <p class="muted">Mehanička, hot-swap prekidači, RGB, PBT kapice</p>
+              <span class="price">129,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Tipkovnica</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Compact 60 Wireless</h3>
+              <p class="muted">60 % raspored, Bluetooth + 2,4 GHz, linearni prekidači</p>
+              <span class="price">99,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Tipkovnica</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Arena Full-Size</h3>
+              <p class="muted">Puna veličina s numeričkim dijelom, membranska, RGB</p>
+              <span class="price">39,90 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="slusalice">
+        <div class="section-head"><h2>Slušalice</h2></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-img">Slušalice</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Echo 7.1 Surround</h3>
+              <p class="muted">Žičane, virtualni 7.1 zvuk, odvojivi mikrofon</p>
+              <span class="price">69,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Slušalice</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Aero Wireless</h3>
+              <p class="muted">Bežične, 40 h baterije, 50 mm driveri</p>
+              <span class="price">119,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="monitori">
+        <div class="section-head"><h2>Monitori</h2></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-img">Monitor</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Vista 27" 1440p 165 Hz</h3>
+              <p class="muted">IPS panel, 1 ms, Adaptive Sync, podesivi stalak</p>
+              <span class="price">279,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Monitor</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Vista 24" 1080p 240 Hz</h3>
+              <p class="muted">Za natjecateljsko igranje, Fast IPS, 0,5 ms</p>
+              <span class="price">229,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="racunala">
+        <div class="section-head"><h2>Gotova računala</h2></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-img">Računalo</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>GigaGear Nova 7</h3>
+              <p class="muted">8 jezgri, 32 GB DDR5, RX 8800 16 GB, 1 TB NVMe</p>
+              <span class="price">1 499,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Računalo</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>GigaGear Start 5</h3>
+              <p class="muted">6 jezgri, 16 GB DDR5, RX 7600 8 GB, 512 GB NVMe</p>
+              <span class="price">899,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="komponente">
+        <div class="section-head"><h2>Komponente</h2></div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-img">Grafička</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Vortex RX 8800 16 GB</h3>
+              <p class="muted">Grafička kartica, 3 ventilatora, 1440p igranje</p>
+              <span class="price">649,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Procesor</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Octa 8700X</h3>
+              <p class="muted">Procesor, 8 jezgri / 16 niti, do 5,4 GHz</p>
+              <span class="price">329,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Memorija</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Pulse DDR5 32 GB (2×16)</h3>
+              <p class="muted">6000 MT/s, CL30, RGB</p>
+              <span class="price">109,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">SSD</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Nitro NVMe 1 TB</h3>
+              <p class="muted">PCIe 4.0, 7000 MB/s čitanje</p>
+              <span class="price">79,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Matična</div>
+            <div class="card-body">
+              <span class="badge badge-ok">Dostupno</span>
+              <h3>Core B850 ATX</h3>
+              <p class="muted">Matična ploča, DDR5, Wi-Fi 6E, 2× M.2</p>
+              <span class="price">189,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+                <a href="kosarica.html" class="btn btn-sm btn-outline">U košaricu</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">Napajanje</div>
+            <div class="card-body">
+              <span class="badge badge-warn">Rasprodano</span>
+              <h3>Volt 750 W Gold</h3>
+              <p class="muted">Modularno napajanje, 80+ Gold, tihi ventilator</p>
+              <span class="price">99,00 €</span>
+              <div class="actions">
+                <a href="proizvod.html" class="btn btn-sm">Detalji</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>GigaGear</h4>
+        <p>Web trgovina gaming opremom i računalnim komponentama. Projektni zadatak iz kolegija Web programiranje.</p>
+      </div>
+      <div>
+        <h4>Trgovina</h4>
+        <ul>
+          <li><a href="proizvodi.html">Svi proizvodi</a></li>
+          <li><a href="proizvodi.html#komponente">Komponente</a></li>
+          <li><a href="proizvodi.html#racunala">Gotova računala</a></li>
+          <li><a href="kosarica.html">Košarica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Korisnički račun</h4>
+        <ul>
+          <li><a href="prijava.html">Prijava</a></li>
+          <li><a href="registracija.html">Registracija</a></li>
+          <li><a href="admin.html">Administracija</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informacije</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html#dostava">Dostava i plaćanje</a></li>
+          <li><a href="kontakt.html#povrat">Povrat i jamstvo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 GigaGear. Sva prava pridržana.</p>
+  </div>
+</footer>
+
+</body>
+</html>
